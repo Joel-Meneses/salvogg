@@ -1,3 +1,15 @@
-.import/
+# Godot 4+ specific ignores
 .godot/
+.import/
 export/
+
+# Imported asset caches (Godot 3)
+import/
+
+# Exported games 
+bin/
+builds/
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
