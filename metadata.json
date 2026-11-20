@@ -1,6 +1,0 @@
-{
-  "name": "SALVO! - Jogo Barra-Bandeira 3D",
-  "description": "Jogo 3D competitivo de barra-bandeira 3v3 estilo Brawl Stars com Bobby, Silver e Lupy, habilidades especiais, congelamento, resgate e captura de bandeiras.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
