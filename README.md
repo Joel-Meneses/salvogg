@@ -1,4 +1,4 @@
-# Projeto Barra Bandeira (MVP)
+# Projeto SALVO! (MVP)
 
 Um jogo multiplayer competitivo inspirado na tradicional brincadeira de rua **Barra Bandeira**, desenvolvido na **Godot Engine**. 
 
