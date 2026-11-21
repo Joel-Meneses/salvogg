@@ -1,8 +1,28 @@
 [gd_scene format=3 uid="uid://d34r8t51qh5u1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_wfeq3"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfeq3"]
+albedo_color = Color(1, 0.2901961, 0.19607843, 1)
 
 [node name="Main" type="Node3D" unique_id=1983663009]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2107497091]
-mesh = SubResource("BoxMesh_wfeq3")
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1685047696]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1078506123]
+size = Vector3(24, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=874812197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16305828, 0)
+size = Vector3(24, 0.68, 0.15)
+material = SubResource("StandardMaterial3D_wfeq3")
+
+[node name="character_teste" parent="." unique_id=2053236187 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49616766, 5.8212147)
+can_jump = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1145510669]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 10, 0)
+
+[editable path="character_teste"]
