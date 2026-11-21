@@ -12,6 +12,22 @@ albedo_color = Color(1, 0.2901961, 0.19607843, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkbxi"]
 albedo_color = Color(0.21568628, 0.2901961, 0.13725491, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ja7cm"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a758i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbuda"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojeok"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
 [node name="Main" type="Node3D" unique_id=1983663009]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1685047696]
@@ -33,13 +49,36 @@ material = SubResource("StandardMaterial3D_lkbxi")
 [node name="character_teste" parent="." unique_id=2053236187 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49616766, 5.8212147)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1145510669]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8.6753235, 0)
-
 [node name="bot_teste" parent="." unique_id=502960089 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(-0.99813074, 0, -0.061114676, 0, 1, 0, 0.061114676, 0, -0.99813074, 0, 0.49616766, -7.8476257)
 script = ExtResource("2_0xm2m")
 velocidade = 3.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1145510669]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8.6753235, 0)
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="." unique_id=326252319]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1495728498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.211331, 0.93515205, 0)
+size = Vector3(1, 6, 50)
+material = SubResource("StandardMaterial3D_ja7cm")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1787577232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.446173, 1.0245647, 0)
+size = Vector3(1, 6, 50)
+material = SubResource("StandardMaterial3D_a758i")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=31332105]
+transform = Transform3D(-0.0069946297, 0, -0.9999755, 0, 1, 0, 0.9999755, 0, -0.0069946297, -0.4110613, 1.0470338, 25.239538)
+size = Vector3(1, 6, 25)
+material = SubResource("StandardMaterial3D_hbuda")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1632681631]
+transform = Transform3D(-0.0069946297, 0, -0.9999755, 0, 1, 0, 0.9999755, 0, -0.0069946297, -0.4110613, 1.2325058, -25.367601)
+size = Vector3(1, 6, 25)
+material = SubResource("StandardMaterial3D_ojeok")
 
 [editable path="character_teste"]
 [editable path="bot_teste"]
