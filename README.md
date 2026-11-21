@@ -50,11 +50,10 @@ Para adicionar profundidade tática à brincadeira clássica, o MVP conta com 3 
 ## 👥 Equipe de Desenvolvimento
 
 * **Julia Sousa de Lima** 
-* **Vitor Miguel** 
+* **Vitor Miguel de Souza Santos** 
 * **Joel Ferreira Meneses** 
-* * **Maria Clara Soares Bezerra**
-* **João Victor**
-* **Marianne** 
+* **Maria Clara Soares Bezerra**
+* **João Victor Queiroz de Barros** 
 ---
 
 *Desenvolvido como projeto de estudo e prototipagem na Godot Engine.*
