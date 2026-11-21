@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://d34r8t51qh5u1"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cexkqu2cejcb8" path="res://addons/proto_controller/bot_teste.gd" id="2_0xm2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsfqu"]
+albedo_color = Color(0.21568628, 0.23921569, 0.019607844, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfeq3"]
 albedo_color = Color(1, 0.2901961, 0.19607843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkbxi"]
+albedo_color = Color(0.21568628, 0.2901961, 0.13725491, 1)
 
 [node name="Main" type="Node3D" unique_id=1983663009]
 
@@ -12,17 +19,27 @@ use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1078506123]
 size = Vector3(24, 1, 50)
+material = SubResource("StandardMaterial3D_xsfqu")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=874812197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16305828, 0)
 size = Vector3(24, 0.68, 0.15)
 material = SubResource("StandardMaterial3D_wfeq3")
 
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=465575385]
+size = Vector3(400, 0.95, 400)
+material = SubResource("StandardMaterial3D_lkbxi")
+
 [node name="character_teste" parent="." unique_id=2053236187 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49616766, 5.8212147)
-can_jump = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1145510669]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 10, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8.6753235, 0)
+
+[node name="bot_teste" parent="." unique_id=502960089 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(-0.99813074, 0, -0.061114676, 0, 1, 0, 0.061114676, 0, -0.99813074, 0, 0.49616766, -7.8476257)
+script = ExtResource("2_0xm2m")
+velocidade = 3.5
 
 [editable path="character_teste"]
+[editable path="bot_teste"]
